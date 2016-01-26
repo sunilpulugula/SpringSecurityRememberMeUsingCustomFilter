@@ -6,7 +6,7 @@ Spring provides an Interface for remember me, that is RememberMeServices.This in
 
 1. TokenBasedRememberMeServices
 2. PersistentTokenBasedRememberMeServices.
-3. 
+
 RememberMeServices is hooked in UsernamePasswordAuthenticationFilter, which will invoke a concrete RememberMeServices at the appropriate times.This interface therefore provides the underlying remember-me implementation with sufficient notification of authentication-related events, and delegates to the implementation whenever a candidate web request might contain a cookie and wish to be remembered.
 
 In this application we provide a login form with remember me enabled and we use TokenBasedRememberMeServices for remember me token management.
