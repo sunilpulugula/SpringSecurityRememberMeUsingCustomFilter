@@ -24,3 +24,13 @@ When user logs in,TokenBasedRememberMeServices generates a RememberMeAuthenticat
 Further requests, remember-me token will be associated in each request cookies.RememberMeServices will decode this token and token is validated by comparing with expected TokenSignature.If tokens are same then a new token is generated and sent back to user else InvalidCookieException is thrown.
 
 In addition, TokenBasedRememberMeServices requires A UserDetailsService from which it can retrieve the username and password for signature comparison purposes, and generate the RememberMeAuthenticationToken to contain the correct GrantedAuthority[]s.
+
+# Build :
+
+mvn clean install
+
+deploy spring-security-remember-me-example.war file in web server(eg, tomcat).
+
+# Blog :
+
+Please read this [blog](https://sunilkumarpblog.blogspot.in/2016/01/spring-security-remember-me.html) for precise explination of this application.
